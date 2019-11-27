@@ -1,3 +1,6 @@
+from sub import sub
+
+
 def add():
     num1 = input("enter first num>> ")
     num2 = input("enter second num>> ")
@@ -11,6 +14,15 @@ def add():
 
 
 def add(a, b):
+    neg = ""
+    if a[0] == "-" and b[0] != "-":
+        return sub(b, a[1:])
+    if b[0] == "-" and a[0] != "-":
+        return sub(a, b[1:])
+    if a[0] == "-" and b[0] == "-":
+        a = a[1:]
+        b = b[1:]
+        neg = "-"
     carry = 0
     result = ""
     maximum = len(a) if len(a) > len(b) else len(b)
@@ -24,7 +36,7 @@ def add(a, b):
         temp = temp % 10
         result = str(temp) + result
     print("added ", result)
-    return result
+    return neg + result
 
 
 if __name__ == '__main__':

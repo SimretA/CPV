@@ -1,10 +1,8 @@
 from adder import add
 
 
-def multiply():
+def multiply(num1, num2):
     carry = 0
-    num1 = input("enter first num>> ")
-    num2 = input("enter second num>> ")
     num1len = len(num1)
     num2len = len(num2)
     to_add = []
@@ -29,4 +27,6 @@ def multiply():
 
 
 if __name__ == '__main__':
-    multiply()
+    num1 = input("enter first num>> ")
+    num2 = input("enter second num>> ")
+    multiply(num1, num2)
