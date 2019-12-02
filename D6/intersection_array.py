@@ -17,4 +17,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.intersection([1, 2, 2, 1], [2, 2]))
+    print(sol.intersection([1, 2, 2, 7, 1], [2, 2, 7]))

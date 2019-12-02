@@ -3,7 +3,6 @@ import random
 
 def rann(min, max):
     list1 = list()
-    rands = list()
     for i in range(min, max + 1):
         list1.append(i)
     for x in range(0, len(list1)):
