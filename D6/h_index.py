@@ -4,7 +4,16 @@ class Solution(object):
         :type citations: List[int]
         :rtype: int
         """
-        print(reversed(citations))
+        c_temp = sorted(citations, reverse=True)
+
+        length = len(citations)
+        print(c_temp)
+        for i in range(length):
+            if c_temp[i] <= i:
+                return i
+
+        return length
+
 
 if __name__ == '__main__':
     s = Solution()
