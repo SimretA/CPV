@@ -1,3 +1,6 @@
+from D11.delete_duplicate import ListNode
+
+
 class MyLinkedList(object):
 
     def __init__(self):
