@@ -4,11 +4,9 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-
+        t1, t2, t3 = 0, 1, 1
         if n == 0:
             return 0
-        elif n == 1 or n == 2:
-            return 1
-        elif n == 3:
-            return 2
-        return self.tribonacci(n - 3) + self.tribonacci(n - 2) + self.tribonacci(n - 1)
+        for i in range(3, n+1):
+                t1, t2, t3 = t2, t3, t1+ t2 + t3
+        return t3
